@@ -18,23 +18,23 @@ public class Task {
         int a = input.nextInt();
         if (a == 1) {
             System.out.println("Выбрана операция 'запуск калькулятора'");
-            System.out.println("Выберите операцию: ('+'- 1, '-'- 2, '*'- 3, '/'- 4)");
-            int f = input.nextInt();
+            System.out.println("Выберите операцию: ('+', '-', '*', '/')");
+            String f = input.next();
             System.out.println("Введите первое дробное число: ");
             double g = input.nextDouble();
             System.out.println("Введите второе дробное число: ");
             double h = input.nextDouble();
             switch (f){
-                case 1: Math.sum(g,h);
+                case "+": Math.sum(g,h);
                     break;
-                case 2: Math.diff(g,h);
+                case "-": Math.diff(g,h);
                     break;
-                case 3: Math.mult(g,h);
+                case "*": Math.mult(g,h);
                     break;
-                case 4: Math.div(g,h);
+                case "/": Math.div(g,h);
                     break;
                 default:
-                    System.out.println("Нет такого номера операции!");
+                    System.out.println("Нет такой операции!");
             }
         }else if (a == 2) {
             System.out.println("Выбрана операция 'поиск максимального слова в массиве'");
